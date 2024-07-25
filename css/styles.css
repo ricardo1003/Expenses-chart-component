@@ -8,15 +8,23 @@ body{
     min-height: 100vh;
     background-color: hsl(27, 66%, 92%);
 }
-main, .balance{
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+main, .balance, .visualization{
     padding: 1em;
 }
 .balance{
     display: flex;
     justify-content: space-between;
-    border-radius: 10px;
     background-color: hsl(10, 79%, 65%);
     color: white;
+}
+.balance, .visualization{
+    border-radius: 10px;
+
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -31,11 +39,84 @@ main, .balance{
     font-weight: 700;
 }
 
+.visualization{
+    background-color: hsl(33, 100%, 98%);
+    color: hsl(25, 47%, 15%);
+}
+h1{
+    margin-bottom: 1em;
+}
+.graph{
+    padding-bottom: .5em;
+}
+ol{
+    margin-bottom: 10px;
+}
+ol, .weekDays{
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+}
+li{
+    height: 200px;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column-reverse;
 
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+li div{
+    background-color: hsl(10, 79%, 65%);
+    height: 25%;
+    border-radius: 5px;
 
-
-
-
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+li div.highest{
+    background-color: hsl(186, 34%, 60%);
+}
+li, .weekDays p{
+    text-align: center;
+    flex: 1 1 10px;
+}
+.weekDays p{
+    color: hsl(28, 10%, 53%);
+    font-size: .75em;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid hsl(27, 66%, 92%);
+    padding-top: .5em;
+}
+h2{
+    color: hsl(28, 10%, 53%);
+    font-size: 18px;
+    font-weight: 400;
+}
+.total div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.total div:first-of-type p{
+    font-weight: 700;
+    font-size: 2em;
+}
+.total div:last-of-type> :nth-child(n){
+    text-align: end;
+}
+.total div:last-of-type p{
+    font-weight: 700;
+}
 
 .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { color: hsl(228, 45%, 44%); }
