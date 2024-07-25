@@ -70,9 +70,8 @@ li{
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-li div{
+.progressBar{
     background-color: hsl(10, 79%, 65%);
-    height: 25%;
     border-radius: 5px;
 
     -webkit-border-radius: 5px;
@@ -80,7 +79,7 @@ li div{
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-li div.highest{
+.progressBar.highest{
     background-color: hsl(186, 34%, 60%);
 }
 li, .weekDays p{
