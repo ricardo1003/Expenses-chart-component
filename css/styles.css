@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans";
+    font-size: 18px;
+}
+body{
+    min-height: 100vh;
+    background-color: hsl(27, 66%, 92%);
+}
+main, .balance{
+    padding: 1em;
+}
+.balance{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: hsl(10, 79%, 65%);
+    color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.balance div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.balance div :last-child{
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
