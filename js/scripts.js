@@ -1,19 +1,19 @@
 const balanceAmountElement = document.getElementsByClassName("balanceAmount")[0]
 const progressBarElements = [...document.getElementsByClassName("progressBar")]
 const progressBarValues = document.getElementsByClassName("moneyValue")
-const monthTotalElement = document.getElementsByClassName("monthTotal")
+const monthTotalElement = document.getElementsByClassName("monthTotal")[0]
 
 let randomData = Array(progressBarElements.length).fill(0)
 
 for(let i=0; i < progressBarElements.length; i++){
     randomData[i] = Math.random()*55
-    progressBarElements[i].style.height = `${randomData[i]*1.5}%`
+    progressBarElements[i].style.height = (randomData[i]*1.5).toFixed(3) + "%"
 }
 
 const highestValue = Math.max(...randomData)
 
 for(let i=0; i < progressBarElements.length; i++){
-    if(progressBarElements[i].style.height === `${(highestValue*1.5).toFixed(4)}%`){
+    if(progressBarElements[i].style.height === `${(highestValue*1.5).toFixed(3)}%`){
         progressBarElements[i].classList.add("highest")
     }else{
         progressBarElements[i].classList.remove("highest")
@@ -22,3 +22,8 @@ for(let i=0; i < progressBarElements.length; i++){
         progressBarValues[i].innerHTML = `$${(randomData[i]*1.5).toFixed(2)}`
     })
 }
+
+const monthTotal = randomData.reduce((acc, cur) => acc + cur, 0)
+monthTotalElement.innerHTML = `$${monthTotal.toFixed(2)}`
+
+balanceAmountElement.innerHTML = `$${(Math.random() * (1000 - monthTotal) + monthTotal).toFixed(2)}`
