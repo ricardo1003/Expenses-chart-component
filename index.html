@@ -15,63 +15,63 @@
 </head>
 <body>
   <main>
-    <section class="balance">
+    <section class="balance" aria-labelledby="balance-header">
       <div>
-        <p>My balance</p>
-        <p class="balanceAmount">$921.48</p>
+        <p id="balance-header">My balance</p>
+        <p class="balanceAmount" aria-live="polite">$0</p>
       </div>
       <picture>
         <img src="./images/logo.svg" alt="logo">
       </picture>
     </section>
-    <section class="visualization">
-      <h1>Spending - Last 7 days</h1>
+    <section class="visualization" aria-labelledby="spending-header">
+      <h1 id="spending-header">Spending - Last 7 days</h1>
       <section class="graph">
-        <ol>
+        <ol aria-label="Spending chart">
           <li>
-            <div class="progressBar">
-              <div class="moneyValue">$1.00</div>
+            <button type="button" class="progressBar" aria-label="Spending: $1.00">
+              <div class="moneyValue" aria-hidden="true">$1.00</div>
               <div class="filter"></div>
-          </div>
-        </li>
+            </button>
+          </li>
           <li>
-            <div class="progressBar">
-              <div class="moneyValue">$1.00</div>
+            <button type="button" class="progressBar" aria-label="Spending: $1.00">
+              <div class="moneyValue" aria-hidden="true">$1.00</div>
               <div class="filter"></div>
-          </div>
-        </li>
+            </button>
+          </li>
           <li>
-            <div class="progressBar">
-              <div class="moneyValue">$1.00</div>
+            <button type="button" class="progressBar" aria-label="Spending: $1.00">
+              <div class="moneyValue" aria-hidden="true">$1.00</div>
               <div class="filter"></div>
-          </div>
-        </li>
+            </button>
+          </li>
           <li>
-            <div class="progressBar">
-              <div class="moneyValue">$1.00</div>
+            <button type="button" class="progressBar" aria-label="Spending: $1.00">
+              <div class="moneyValue" aria-hidden="true">$1.00</div>
               <div class="filter"></div>
-          </div>
-        </li>
+            </button>
+          </li>
           <li>
-            <div class="progressBar">
-              <div class="moneyValue">$1.00</div>
+            <button type="button" class="progressBar" aria-label="Spending: $1.00">
+              <div class="moneyValue" aria-hidden="true">$1.00</div>
               <div class="filter"></div>
-          </div>
-        </li>
+            </button>
+          </li>
           <li>
-            <div class="progressBar">
-              <div class="moneyValue">$1.00</div>
+            <button type="button" class="progressBar" aria-label="Spending: $1.00">
+              <div class="moneyValue" aria-hidden="true">$1.00</div>
               <div class="filter"></div>
-          </div>
-        </li>
+            </button>
+          </li>
           <li>
-            <div class="progressBar">
-              <div class="moneyValue">$1.00</div>
+            <button type="button" class="progressBar" aria-label="Spending: $1.00">
+              <div class="moneyValue" aria-hidden="true">$1.00</div>
               <div class="filter"></div>
-          </div>
-        </li>
+            </button>
+          </li>
         </ol>
-        <div class="weekDays">
+        <div class="weekDays" aria-hidden="true">
           <p>mon</p>
           <p>tue</p>
           <p>wed</p>
@@ -81,10 +81,10 @@
           <p>sun</p>
         </div>
       </section>
-      <section class="total">
+      <section class="total" aria-labelledby="total-header">
         <div>
-          <h2>Total this month</h2>
-          <p class="monthTotal">$478.33</p>
+          <h2 id="total-header">Total this month</h2>
+          <p class="monthTotal" aria-live="polite">$0</p>
         </div>
         <div>
           <p>+2.4%</p>

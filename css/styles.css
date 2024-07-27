@@ -82,19 +82,26 @@ li{
     position: relative;
     background-color: hsl(10, 79%, 65%);
     border-radius: 5px;
+    border: none;
+    padding: 0;
 
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
+.progressBar:focus{
+    outline: none;
+}
 .progressBar.highest{
     background-color: hsl(186, 34%, 60%);
 }
 .progressBar .moneyValue{
+    z-index: 1;
     display: none;
 }
-.progressBar:hover .filter{
+.progressBar:hover .filter,
+.progressBar:focus .filter{
     height: 100%;
     width: 100%;
     display: block;
@@ -108,7 +115,8 @@ li{
     -o-border-radius: 5px;
     -webkit-filter: opacity(.5);
 }
-.progressBar:hover .moneyValue{
+.progressBar:hover .moneyValue,
+.progressBar:focus .moneyValue{
     padding: 10px;
     display: block;
     position: absolute;
