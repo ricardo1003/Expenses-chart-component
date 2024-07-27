@@ -1,5 +1,6 @@
 const balanceAmountElement = document.getElementsByClassName("balanceAmount")[0]
 const progressBarElements = [...document.getElementsByClassName("progressBar")]
+const progressBarValues = document.getElementsByClassName("moneyValue")
 const monthTotalElement = document.getElementsByClassName("monthTotal")
 
 let randomData = Array(progressBarElements.length).fill(0)
@@ -17,4 +18,7 @@ for(let i=0; i < progressBarElements.length; i++){
     }else{
         progressBarElements[i].classList.remove("highest")
     }
+    progressBarElements[i].addEventListener("mouseover",()=>{
+        progressBarValues[i].innerHTML = `$${(randomData[i]*1.5).toFixed(2)}`
+    })
 }
